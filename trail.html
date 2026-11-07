@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Forts and treks by Omprasad Tilak across Maharashtra: Tikona, Malhargad, Rohida, Purandar, Visapur, Kenjalgad and Ozarde waterfall.">
+<title>Trail | Omprasad Tilak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>(function(){var r=false,s=false;try{var n=performance.getEntriesByType('navigation')[0];r=n?n.type==='reload':!!(performance.navigation&&performance.navigation.type===1)}catch(e){}try{s=sessionStorage.getItem('pre')==='1'}catch(e){}var home=/(^|\/)(index\.html)?$/.test(location.pathname);if(r||(home&&!s))document.documentElement.className+=' show-pre pre-lock'})();</script>
+<script>(function(){var d=document.documentElement;if(d.classList.contains('show-pre'))return;try{var n=performance.getEntriesByType('navigation')[0];if(n&&n.type==='navigate')d.className+=' show-pt'}catch(e){}})();</script>
+<style>
+.hint{display:flex;align-items:center;gap:12px;margin:-18px 0 36px;font:500 17px var(--sans);color:var(--acc)}
+.hint .dot{flex:none;animation-iteration-count:infinite}
+.tile{all:unset;display:block;width:100%;cursor:pointer;position:relative}
+.tile:focus-visible{outline:2px solid var(--acc);outline-offset:14px;border-radius:6px}
+.trail figcaption{align-items:baseline}
+.trail figcaption i{font:400 italic 15px var(--serif);color:var(--acc);opacity:0;transform:translateX(-6px);transition:.25s;white-space:nowrap}
+.trail figure:hover figcaption i,.trail figure:focus-within figcaption i{opacity:1;transform:none}
+@media(hover:none){.trail figcaption i{opacity:1;transform:none}}
+dialog{border:1px solid var(--line);background:#0e0e0d;color:var(--fg);width:min(980px,94vw);max-height:92vh;max-height:92dvh;padding:0;border-radius:10px;overflow:auto;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+html:has(dialog[open]){overflow:hidden}
+dialog[open]{animation:dpop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes dpop{from{opacity:0;transform:translateY(18px) scale(.98)}}
+.dh{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#0e0e0d;border-bottom:1px solid var(--line);font:500 15px var(--sans)}
+.dh button{all:unset;cursor:pointer;color:var(--fg);padding:4px 2px}
+.dh button:hover{color:var(--acc)}
+.dh button:focus-visible{outline:2px solid var(--acc);border-radius:4px}
+.dh nav{display:flex;gap:22px}
+.dg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;padding:28px 22px 8px}
+.dg img{display:block;width:100%;height:auto;max-height:56vh;object-fit:contain;background:#141412;border-radius:6px}
+.dg .ph{aspect-ratio:3/4;display:grid;place-items:center;background:repeating-linear-gradient(135deg,#141412 0 14px,#101010 14px 28px);color:var(--mute);font:500 13px ui-monospace,Menlo,monospace;border-radius:6px;text-align:center;padding:12px}
+.dg h3{font:800 clamp(34px,5vw,60px)/.95 var(--sans);letter-spacing:-.045em}
+.dg .aka{font:400 italic 22px var(--serif);color:var(--mute);margin:8px 0 22px}
+.facts2{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.facts2 div{padding:12px 12px 14px 0;border-bottom:1px solid var(--line)}
+.facts2 small{display:block;color:var(--acc);font-size:13px}
+.facts2 span{font-size:16px;line-height:1.35;display:block;margin-top:3px}
+.db{padding:20px 22px 28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 40px}
+.db h4{font:700 15px var(--sans);color:var(--acc);margin:18px 0 10px}
+.db p{color:#cfcdc6;font-size:17px}
+.db ol{padding-left:0;list-style:none;counter-reset:s;color:#cfcdc6;font-size:17px}
+.db ol li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;padding:8px 0;border-top:1px solid var(--line)}
+.db ol li:before{content:counter(s);color:var(--mute);font-size:14px;padding-top:3px}
+.db ul{padding-left:1.1em;color:#cfcdc6;font-size:16px}
+.db ul li{margin-bottom:.4em}
+.db ul li::marker{color:#ff3131}
+.db .full{grid-column:1/-1}
+.go{display:inline-block;margin-top:14px;background:var(--acc);color:#0a0a0a;padding:14px 26px;border-radius:99px;font:700 16px var(--sans)}
+.go:hover{background:var(--fg)}
+.note{font-size:13.5px;color:var(--mute);margin-top:14px}
+@media(max-width:760px){.dg,.db{grid-template-columns:1fr}.dg{gap:20px}.dg img{max-height:42vh}}
+@media(prefers-reduced-motion:reduce){dialog[open]{animation:none}}
+</style>
+</head>
+<body>
+<div id="pre" aria-hidden="true"><span>Loading portfolio</span><b id="pn">0%</b></div>
+<div id="pt" aria-hidden="true"><span style="font-size:min(26vw,360px)">Trail</span></div>
+<header class="bar">
+  <a href="index.html" aria-label="Home">OT/</a>
+  <button id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<div id="menu" role="dialog" aria-label="Menu">
+  <div class="top"><span>/ menu</span><button id="mc">Close</button></div>
+  <nav><a href="index.html">About</a><a href="work.html">Work</a><a href="experience.html">Experience</a><a href="trail.html" aria-current="page">Trail</a><a href="certifications.html">Credentials</a><a href="certifications.html#contact">Contact</a></nav>
+  <div class="cn">
+    <a href="https://in.linkedin.com/in/omprasad-tilak-69430b297" target="_blank" rel="noopener"><small>01</small>LinkedIn</a>
+    <a href="https://github.com/omeetilak" target="_blank" rel="noopener"><small>02</small>GitHub</a>
+    <a href="mailto:omprasadtilak2171@gmail.com"><small>03</small>Email</a>
+  </div>
+</div>
+
+<main id="top" class="inner">
+  <section id="trail">
+    <div class="sh"><h2>On the <i>trail</i></h2></div>
+    <p class="trail-intro">Six forts and a waterfall so far, the latest being Kenjalgad, and <i>still counting</i>. I trek Maharashtra's forts to learn more about Chhatrapati Shivaji Maharaj, one climb at a time.</p>
+    <p class="hint"><span class="dot" aria-hidden="true"></span>Click on any photo to see the fort's story, trek details and the route from Pune.</p>
+    <div class="trail" id="grid"></div>
+    <div class="life">
+      <p><b>Next up</b>More Maharashtra forts, and the history behind each one.</p>
+      <p><b>Off the clock</b>I train at the gym regularly. The discipline carries over to everything else.</p>
+    </div>
+  </section>
+  <a class="next" href="certifications.html"><small>Next page</small><b>Credentials &rarr;</b></a>
+</main>
+
+<dialog id="fd" aria-labelledby="dn">
+  <div class="dh"><nav><button id="dp" type="button">&larr; Prev</button><button id="dx" type="button">Next &rarr;</button></nav><button id="dc" type="button">Close</button></div>
+  <div class="dg"><div id="dimg"></div><div><h3 id="dn"></h3><p class="aka" id="da"></p><div class="facts2" id="df"></div></div></div>
+  <div class="db" id="dbody"></div>
+</dialog>
+
+<footer>
+  <div><b>Code</b><a href="https://github.com/omeetilak" target="_blank" rel="noopener">GitHub</a></div>
+  <div><b>Social</b><a href="https://in.linkedin.com/in/omprasad-tilak-69430b297" target="_blank" rel="noopener">LinkedIn</a></div>
+  <div><b>Mail</b><a href="mailto:omprasadtilak2171@gmail.com">omprasadtilak2171@gmail.com</a></div>
+  <div><b>&copy;2026</b>Omprasad Tilak, Pune</div>
+</footer>
+<script src="main.js"></script>
+<script>
+/* Edit this list to change any text. Change "img" if your file name is different. */
+var F=[
+{n:"Tikona",aka:"Also called Vitandgad. The name means \u201ctriangle\u201d.",tag:"First fort",img:"images/tikona.jpeg",
+ f:[["Height","~3,500 ft"],["Difficulty","Easy to medium"],["Base village","Tikona Peth"],["From Pune","~60\u201370 km by road"],["Climb time","1\u20131.5 hr one way"],["Region","Maval, near Kamshet"]],
+ about:"A pyramid-shaped hill fort that dominates the Maval region, and where my fort trekking began. The trail starts from Tikona Peth, where a Mahadev temple and parking sit near the base, and climbs steadily to the summit.",
+ route:["Leave Pune via Chandni Chowk, Pirangut and Paud.","Take the right turn at Paud, then Hadashi and Javan.","Reach Tikona Peth, the base village, and park near the Mahadev temple.","Follow the trail up to the fort, about 1 to 1.5 hours.","Return the same way, about 40 minutes down."],
+ alt:"Alternate road: old Mumbai\u2013Pune highway to Kamshet, then towards Pavana Nagar and Kale to reach Tikona Peth.",
+ tips:["Signboards point the way along the road, and villagers can help.","Carry water and start early."],dest:"Tikona Peth, Maharashtra"},
+{n:"Malhargad",aka:"Also called Sonori Fort, near Saswad.",tag:"Fort",img:"images/malhargad.jpeg",
+ f:[["Height","~3,100 ft"],["Difficulty","Easy"],["Base village","Sonori (or Zendewadi)"],["From Pune","~30\u201335 km"],["Climb time","30\u201345 min from Sonori"],["Region","Purandar taluka, Pune"]],
+ about:"A small fort built to watch over Dive Ghat on the Pune\u2013Saswad route, and often described as one of the last forts built by the Marathas. It has Khandoba and Shiva temples, and the Panse family palace stands in Sonori at the base.",
+ route:["Drive from Pune through Hadapsar towards Saswad.","Cross Dive Ghat and take a left turn towards Sonori village.","Park at Sonori or drive on to the fort base. The last stretch is not a tar road.","Climb to the fort in about 30 to 45 minutes.","Alternative start: Zendewadi village, left once you climb Dive Ghat, about 45 minutes to 1.5 hours."],
+ alt:"Sonori is about 6 km from Saswad.",
+ tips:["No water on the fort, so carry enough.","The fort can be seen fully in 30 to 45 minutes."],dest:"Sonori, Maharashtra"},
+{n:"Rohida",aka:"Also called Vichitragad, Rohideshwar and Binicha Killa.",tag:"Fort",img:"images/rohida.jpeg",
+ f:[["Height","~3,600 ft"],["Difficulty","Easy to medium"],["Base village","Bajarwadi"],["From Pune","~62 km"],["Climb time","~1 hr to the first gate"],["Region","Bhor taluka, Pune"]],
+ about:"A Yadava-era hill fort in the Bhor region, later renamed Vichitragad by the Pant Sachivs of Bhor. It is known for strong winds, wide grassy trails, bastions and the Rohidamalla temple. In the monsoon the wind can push waterfalls upwards.",
+ route:["Drive from Pune via Khed Shivapur and Kapurhol to Bhor.","Continue about 7 km south of Bhor to Bajarwadi village.","Find the village school. The trail starts on the hillock opposite it.","Follow the wide, well-marked path for about an hour to the first gate.","Explore the fort top, then return the same way."],
+ alt:"Another way up and down: via Ambawade or Nazare on the far side.",
+ tips:["Few trees on the route, so expect sun and wind.","Post-monsoon and winter are the best seasons."],dest:"Bajarwadi, Bhor, Maharashtra"},
+{n:"Purandar",aka:"Twin fort of Vajragad. Birthplace of Chhatrapati Sambhaji Maharaj.",tag:"Fort",img:"images/purandar.jpeg",
+ f:[["Height","~4,470 ft (1,387 m)"],["Difficulty","Easy to medium"],["Base village","Narayanpur"],["From Pune","~50 km, about 1.5 hr drive"],["Climb time","45 min \u2013 2 hr, by trail or road"],["Region","Purandar taluka, Pune"]],
+ about:"One of the most important forts in Shivaji Maharaj\u2019s story. The Treaty of Purandar was signed here in 1665, and Murarbaji Deshpande gave his life defending the fort against the Mughals. His statue stands near Bini Darwaja. Purandar has two levels, with Vajragad as its twin on the east.",
+ route:["Drive from Pune via Hadapsar, Dive Ghat and Saswad to Narayanpur.","Or take the highway via Katraj and Kapurhol, then turn to Narayanpur.","From Narayanpur, walk up past Narayanpeth towards Bini Darwaja, about 45 minutes to an hour.","Continue to Purandar Machi, then the Murarbaji statue and Purandeshwar temple.","Return the same way."],
+ alt:"A road also runs up to the Machi, but the army checks vehicles at the Murar gate.",
+ tips:["Part of the fort is an army training area, so follow the rules.","Visitors are asked to leave by 5 pm."],dest:"Narayanpur, Purandar, Maharashtra"},
+{n:"Visapur",aka:"Twin of Lohagad, on the same plateau.",tag:"Fort",img:"images/visapur.jpeg",
+ f:[["Height","~3,556 ft"],["Difficulty","Easy to medium"],["Base village","Bhaje (near Malavli)"],["From Pune","~60\u201375 km"],["Climb time","~2\u20133 hr from Bhaje"],["Region","Near Lonavala"]],
+ about:"Larger and higher than its twin Lohagad, Visapur has caves, water cisterns, old building ruins and rock carvings. The British took the Lohagad\u2013Visapur forts in 1818. It is best known as a monsoon trek, with waterfalls along the way.",
+ route:["Take the old Mumbai\u2013Pune highway from Pune and exit at Malavli.","Drive past the village to Bhaje, near the Bhaje caves.","Start the climb from Bhaje, or take the shorter waterfall route from Lohagadwadi.","Reach the fort plateau in about 2 to 3 hours.","Return the same way."],
+ alt:"By train: Pune\u2013Lonavala local to Malavli, then local transport to Bhaje.",
+ tips:["Carry water. None is available on the fort.","The Patan village route is not clearly marked, so avoid it."],dest:"Bhaje Caves, Maharashtra"},
+{n:"Ozarde",aka:"A waterfall inside the Koyna Wildlife Sanctuary.",tag:"Waterfall",img:"images/ozarde.jpeg",
+ f:[["Type","Waterfall trek"],["Difficulty","Easy trail"],["Trailhead","Ozarde, near Koynanagar"],["From Pune","~190 km"],["Walk time","30\u201345 min to the base"],["Region","Satara district"]],
+ about:"A tall waterfall in thick forest in the Western Ghats, best visited in the monsoon and just after it. It sits inside the Koyna Wildlife Sanctuary near Koynanagar, and is a popular day trip from Pune and Mumbai.",
+ route:["Drive from Pune towards Satara on the highway.","Continue from Satara to Koynanagar.","Use local transport, such as an auto, from Koynanagar towards Ozarde.","Walk the forest trail for 30 to 45 minutes to the base of the falls."],
+ alt:"Nearest rail station: Karad, about 60 km away. Chiplun is about 45 km.",
+ tips:["Mobile network is weak or missing near the falls.","Entry rules can change, so check locally before you go."],dest:"Ozarde Waterfall, Satara, Maharashtra"},
+{n:"Kenjalgad",aka:"Also called Ghera Khelanja. Near Wai, Satara.",tag:"Latest fort",img:"images/kenjalgad.jpeg",latest:1,
+ f:[["Height","~4,270 ft"],["Difficulty","Easy to medium"],["Base village","Ghera Kenjal"],["From Pune","~80 km"],["Climb time","30\u201345 min from the base"],["Region","Bhor\u2013Wai border"]],
+ about:"A fort on the Mandhardev spur of the Mahadev range, known for its rock-cut staircase and a tunnel-like cave near the top. Shivaji Maharaj captured the Wai and Bhor forts but did not win this one until 1674. It sits close to Raireshwar and Kamalgad, so many people combine them.",
+ route:["Drive from Pune on the Bengaluru highway to Bhor.","Turn right down the Varandha Ghat road, and at Ambeghar turn left.","Reach the base village, Ghera Kenjal. The fort is visible from here.","The path starts between two houses past a small field, then climbs the stone steps.","Or reach it via Wai, which many find the easier road from Pune."],
+ alt:"Option: continue over the Raireshwar plateau and return via Wai.",
+ tips:["No water on the trail or the fort, so carry plenty.","In monsoon, fog and wind make the top slow and eerie."],dest:"Ghera Kenjal, Maharashtra"}
+];
+(function(){
+  var g=document.getElementById('grid'),d=document.getElementById('fd'),cur=0;
+  g.innerHTML=F.map(function(x,i){
+    var k=x.img.split('/').pop().replace(/\.\w+$/,'');
+    return '<figure'+(x.latest?' class="latest"':'')+'><button class="tile" data-i="'+i+'" aria-label="'+x.n+': open fort details and route"><div class="slot" data-hint="Add '+x.img+'"><img src="'+x.img+'" alt="'+x.n+'" onerror="this.remove()"></div></button><figcaption>'+x.n+'<span>'+x.tag+' <i>Tap for route</i></span></figcaption></figure>';
+  }).join('');
+  function show(i){
+    cur=(i+F.length)%F.length;var x=F[cur];
+    document.getElementById('dn').textContent=x.n;
+    document.getElementById('da').textContent=x.aka;
+    document.getElementById('dimg').innerHTML='<img src="'+x.img+'" alt="'+x.n+'" onerror="this.outerHTML=\'<div class=ph>Add '+x.img+'</div>\'">';
+    document.getElementById('df').innerHTML=x.f.map(function(r){return '<div><small>'+r[0]+'</small><span>'+r[1]+'</span></div>'}).join('');
+    var url='https://www.google.com/maps/dir/?api=1&origin=Pune&destination='+encodeURIComponent(x.dest);
+    document.getElementById('dbody').innerHTML='<div><h4>About</h4><p>'+x.about+'</p><h4>Good to know</h4><ul>'+x.tips.map(function(t){return '<li>'+t+'</li>'}).join('')+'</ul></div>'+
+      '<div><h4>Route from Pune</h4><ol>'+x.route.map(function(r){return '<li>'+r+'</li>'}).join('')+'</ol><p class="note">'+x.alt+'</p><a class="go" href="'+url+'" target="_blank" rel="noopener">Open route in Google Maps &nearr;</a></div>'+
+      '<p class="note full">Distances, heights and times are approximate and vary by source and by the route you take. Check conditions locally before you go.</p>';
+    d.scrollTop=0;
+  }
+  g.addEventListener('click',function(e){var b=e.target.closest('.tile');if(!b)return;show(+b.dataset.i);d.showModal()});
+  document.getElementById('dc').onclick=function(){d.close()};
+  document.getElementById('dp').onclick=function(){show(cur-1)};
+  document.getElementById('dx').onclick=function(){show(cur+1)};
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});
+})();
+</script>
+</body>
+</html>
