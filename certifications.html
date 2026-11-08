@@ -13,6 +13,88 @@
 <script>(function(){var r=false,s=false;try{var n=performance.getEntriesByType('navigation')[0];r=n?n.type==='reload':!!(performance.navigation&&performance.navigation.type===1)}catch(e){}try{s=sessionStorage.getItem('pre')==='1'}catch(e){}var home=/(^|\/)(index\.html)?$/.test(location.pathname);if(r||(home&&!s))document.documentElement.className+=' show-pre pre-lock'})();</script>
 <script>(function(){var d=document.documentElement;if(d.classList.contains('show-pre'))return;try{var n=performance.getEntriesByType('navigation')[0];if(n&&n.type==='navigate')d.className+=' show-pt'}catch(e){}})();</script>
 <script>(function(){try{var f=sessionStorage.getItem('intro');sessionStorage.removeItem('intro');if(f==='1'&&document.documentElement.className.indexOf('show-pre')<0&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className+=' show-intro'}catch(e){}})();</script>
+<style>
+.hint{display:flex;align-items:center;gap:12px;margin:-14px 0 32px;font:500 17px var(--sans);color:var(--acc)}
+.hint .dot{flex:none;animation-iteration-count:infinite}
+.creds button.ct{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:10px 0;position:relative}
+.creds button.ct:hover b,.creds button.ct:focus-visible b{color:var(--acc)}
+.creds button.ct:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+.creds button.ct b{font-weight:500;transition:color .2s;display:block;padding-right:70px}
+.creds button.ct i{position:absolute;right:0;top:12px;font:400 italic 15px var(--serif);color:var(--mute);opacity:0;transform:translateX(-6px);transition:.25s}
+.creds button.ct:hover i,.creds button.ct:focus-visible i{opacity:1;transform:none;color:var(--acc)}
+@media(hover:none){.creds button.ct i{opacity:1;transform:none}}
+.creds li{padding:0}
+dialog{border:1px solid var(--line);background:#0e0e0d;color:var(--fg);width:min(860px,94vw);max-height:92vh;max-height:92dvh;padding:0;border-radius:10px;overflow:auto;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+html:has(dialog[open]){overflow:hidden}
+dialog[open]{animation:dpop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes dpop{from{opacity:0;transform:translateY(18px) scale(.98)}}
+.dh{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#0e0e0d;border-bottom:1px solid var(--line);font:500 15px var(--sans)}
+.dh button{all:unset;cursor:pointer;color:var(--fg);padding:4px 2px}
+.dh button:hover{color:var(--acc)}
+.dh button:focus-visible{outline:2px solid var(--acc);border-radius:4px}
+.dh nav{display:flex;gap:22px}
+.cb{padding:26px 22px 30px}
+.badge2{display:inline-block;font:700 12.5px var(--sans);letter-spacing:.02em;padding:3px 10px;border-radius:99px;border:1px solid var(--acc);color:var(--acc);margin-bottom:14px}
+.badge2.ip{border-color:#ffb020;color:#ffb020}.badge2.pl{border-color:var(--mute);color:var(--mute)}
+.cb h3{font:800 clamp(30px,4.6vw,54px)/1 var(--sans);letter-spacing:-.04em}
+.cb .by{font:400 italic 22px var(--serif);color:var(--mute);margin:8px 0 22px}
+.cb p{color:#cfcdc6;font-size:18px;max-width:40em}
+.cb h4{font:700 14px var(--sans);color:var(--acc);margin:24px 0 10px}
+.sk{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+.sk li{font:500 14px var(--sans);padding:4px 11px;border:1px solid var(--line);border-radius:4px;color:var(--fg);padding-left:11px}
+.kf{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid var(--line)}
+.kf div{padding:11px 14px 13px 0;border-bottom:1px solid var(--line)}
+.kf small{display:block;color:var(--mute);font-size:13px}
+.kf span{font-size:16px}
+.mine{border-left:3px solid var(--acc);padding:2px 0 2px 16px;margin-top:22px;color:#cfcdc6;font-size:17px}
+.mine b{display:block;color:var(--acc);font:700 14px var(--sans);margin-bottom:3px}
+.cdlg{width:min(560px,94vw)}
+.cdlg .cb{padding-top:22px}
+.cdlg h3{font-size:clamp(28px,4vw,42px)}
+.opts{display:grid;gap:12px;margin-top:22px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:8px;background:#121210;transition:.25s}
+.opt:hover,.opt:focus-visible{border-color:var(--acc);transform:translateY(-3px);outline:none}
+.opt b{display:block;font:700 20px var(--sans)}
+.opt span{display:block;color:var(--mute);font-size:15px;word-break:break-all}
+.opt em{font:400 italic 22px var(--serif);color:var(--acc);flex:none}
+button.btn{cursor:pointer;font-family:var(--sans)}
+.cstats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-bottom:18px}
+.cstats div{padding:18px 18px 16px 0}
+.cstats b{display:block;font:800 clamp(44px,6vw,80px)/.9 var(--sans);letter-spacing:-.05em}
+.cstats span{color:var(--mute);font-size:15px}
+.cstats .e b{color:var(--acc)}.cstats .p b{color:#ffb020}
+.pbar{display:flex;height:8px;border-radius:5px;overflow:hidden;gap:3px;margin-bottom:34px}
+.pbar i{display:block;transform-origin:left;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.lane{margin-bottom:34px}
+.lh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.lh h3{font:800 clamp(22px,2.6vw,30px)/1 var(--sans);letter-spacing:-.03em}
+.lh span{color:var(--mute);font:italic 400 18px var(--serif)}
+.lt{display:flex;align-items:stretch;overflow-x:auto;padding:12px 4px 16px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.nd2{all:unset;box-sizing:border-box;flex:0 0 158px;scroll-snap-align:start;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:14px 13px 13px;border:1px solid var(--line);border-radius:10px;background:#121210;position:relative;transition:transform .25s,border-color .25s,background .25s}
+.nd2:hover,.nd2:focus-visible{transform:translateY(-5px);border-color:var(--acc);background:#161614}
+.nd2:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.nd2 b{font:700 15px/1.2 var(--sans);letter-spacing:-.01em}
+.nd2 small{color:var(--mute);font-size:13px;line-height:1.3}
+.nd2 .stt{margin-top:auto;padding-top:8px;font:700 12px var(--sans);font-style:normal;display:flex;align-items:center;gap:6px}
+.nd2 .stt:before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.st-c{border-color:#2d3a14}.st-c .stt{color:var(--acc)}
+.st-i{border-color:#4a3510}.st-i .stt{color:#ffb020}.st-i .stt:before{animation:ping2 1.8s ease-out infinite;box-shadow:0 0 0 0 #ffb020}
+.st-p{border-style:dashed;opacity:.78}.st-p .stt{color:var(--mute)}.st-p .stt:before{background:none;border:1.5px solid currentColor;box-sizing:border-box}
+@keyframes ping2{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.lg{position:relative;width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font:800 15px var(--sans);margin-bottom:4px;overflow:hidden;background:var(--bg2,#1a1a18);border:1px solid var(--line)}
+.lg img{position:absolute;inset:0;width:100%;height:100%;padding:9px;object-fit:contain;background:#1a1a18}
+.cn2{flex:0 0 26px;align-self:center;height:2px;position:relative}
+.cn2:after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:7px solid currentColor;border-right:0}
+.cn2.st-c{background:var(--acc);color:var(--acc)}
+.cn2.st-i{background:linear-gradient(90deg,var(--acc),#ffb020,var(--acc));background-size:200% 100%;animation:flow 2.2s linear infinite;color:#ffb020}
+.cn2.st-p{background:repeating-linear-gradient(90deg,var(--mute) 0 4px,transparent 4px 8px);color:var(--mute);opacity:.7}
+@keyframes flow{to{background-position:-200% 0}}
+@media(max-width:640px){.cstats{grid-template-columns:1fr 1fr 1fr}.cstats div{padding-right:8px}.cstats span{font-size:13px}.nd2{flex-basis:150px}}
+@media(prefers-reduced-motion:reduce){.pbar i,.cn2.st-i,.st-i .stt:before{animation:none}}
+
+</style>
 </head>
 <body>
 <div id="intro" aria-hidden="true"><span>Credentials</span></div>
@@ -36,33 +118,25 @@
 <main id="top" class="inner">
 <section id="creds">
     <div class="sh"><h2>Cre<i>dentials</i></h2></div>
-    <div class="creds">
-      <div><h3>Completed</h3><ul>
-        <li>Google Cybersecurity Certificate<small>Coursera / Google</small></li>
-        <li>SOC Analyst Programme<small>Futurism xPro</small></li>
-        <li>Cloud Security<small>Symbiosis Skills and Professional University</small></li>
-        <li>Generative AI<small>iNeuron</small></li>
-        <li>Google AI Essentials<small>Coursera / Google</small></li>
-        <li>Data Analytics<small>Trainity</small></li>
-        <li>Python<small>openSAP / Cisco Networking Academy</small></li>
-        <li>Advent of Cyber<small>TryHackMe</small></li></ul></div>
-      <div><h3>In progress</h3><ul>
-        <li>SC-300: Identity and Access Administrator<small>Microsoft Learn</small></li>
-        <li>SC-500: Cloud &amp; AI Security Engineer<small>Microsoft Learn</small></li>
-        <li>SOC Level 1 Learning Path<small>TryHackMe</small></li></ul></div>
-      <div><h3>Planned</h3><ul><li>SC-100: Cybersecurity Architect<small>Microsoft Learn</small></li><li>CEH<small>EC-Council</small></li><li>OSCP<small>Offsec</small></li><li>CISSP<small>ISC2</small></li></ul></div>
-    </div>
-    <p class="edu">B.Tech, Computer Science and Engineering<span>Symbiosis Skills and Professional University, Pune · 2023 – 2027 · CGPA 8.33</span></p>
+    <div class="cstats" id="cs"></div><div class="pbar" id="pb"></div>
+    <p class="hint"><span class="dot" aria-hidden="true"></span>Click on any certification to see what it covers and the skills behind it.</p>
+    <div id="cg"></div>
+    <p class="edu">B.Tech, Computer Science and Engineering<span>Symbiosis Skills and Professional University, Pune · 2023 – 2027 · CGPA 8.5</span></p>
   </section>
   <section id="contact" class="contact">
     <h2>Let's <i>talk</i></h2>
     <div class="btns">
-      <a class="btn p" href="mailto:omprasadtilak2171@gmail.com">Shoot a message</a>
+      <button class="btn p" id="msg" type="button" aria-haspopup="dialog">Shoot a message</button>
       <!-- Put your resume at cv/Omprasad_Tilak_CV.pdf -->
       <a class="btn" href="cv/Omprasad_Tilak_CV.pdf" download>Download CV</a>
     </div>
   </section>
 </main>
+
+<dialog id="cd" aria-labelledby="cn"><div class="dh"><nav><button id="cp" type="button">&larr; Prev</button><button id="cx" type="button">Next &rarr;</button></nav><button id="cc" type="button">Close</button></div><div class="cb" id="cbody"></div></dialog>
+<dialog id="md" class="cdlg" aria-labelledby="mt"><div class="dh"><span>/ contact</span><button id="mcl" type="button">Close</button></div><div class="cb"><h3 id="mt">How would you like to reach me?</h3><p style="margin-top:10px">Pick whichever is easiest. I read both.</p>
+<div class="opts"><a class="opt" href="mailto:omprasadtilak2171@gmail.com"><div><b>Email</b><span>omprasadtilak2171@gmail.com</span></div><em>Send &rarr;</em></a>
+<a class="opt" href="https://in.linkedin.com/in/omprasad-tilak-69430b297" target="_blank" rel="noopener"><div><b>LinkedIn</b><span>Open my profile and message me</span></div><em>Open &rarr;</em></a></div></div></dialog>
 
 <footer>
   <div><b>Code</b><a href="https://github.com/omeetilak" target="_blank" rel="noopener">GitHub</a></div>
@@ -71,5 +145,118 @@
   <div><b>&copy;2026</b>Omprasad Tilak, Pune</div>
 </footer>
 <script src="main.js"></script>
+<script>
+/* Edit any text here. st: Completed | In progress | Planned */
+var C=[
+{t:"Google Cybersecurity Certificate",by:"Coursera / Google",st:"Completed",
+ about:"An eight-course professional certificate from Google that prepares learners for entry-level roles such as cybersecurity analyst and SOC analyst, with hands-on labs and portfolio activities.",
+ skills:["Security domains and the CIA triad","Risk management and NIST CSF","Network security","Linux and SQL","Assets, threats and vulnerabilities","SIEM tools and IDS","Detection and incident response playbooks","Python for security automation","Escalation and communication"],
+ courses:["Foundations of Cybersecurity","Play It Safe: Manage Security Risks","Connect and Protect: Networks and Network Security","Tools of the Trade: Linux and SQL","Assets, Threats, and Vulnerabilities","Sound the Alarm: Detection and Response","Automate Cybersecurity Tasks with Python","Put It to Work: Prepare for Cybersecurity Jobs"],
+ facts:[["Format","8 courses, beginner level"],["Study time","About 6 months at 5\u201310 hrs a week"],["Focus","Entry-level security analyst roles"]],
+ mine:"The base for my SOC work: log analysis, SIEM thinking and incident response."},
+{t:"SOC Analyst Programme",by:"Futurism xPro",st:"Completed",
+ about:"Hands-on SOC analyst training that led into my internship at Futurism Technologies, built around how a real security operations centre triages alerts and handles incidents.",
+ skills:["SIEM monitoring (QRadar, Sentinel, Splunk)","Alert triage","Threat hunting","IOC analysis","MITRE ATT&CK mapping","Incident response (PICERL)","DLP policy governance"],
+ facts:[["Level","Level-1 SOC analyst"],["Followed by","SOC Analyst Internship"]],
+ mine:"I applied this directly in my internship. See the Experience page."},
+{t:"Cloud Security",by:"Symbiosis Skills and Professional University",st:"Completed",
+ about:"A university course on securing cloud environments, which gave me the grounding for Microsoft cloud security work.",
+ skills:["Cloud security fundamentals","Identity and access management","Microsoft Defender for Cloud","Microsoft Entra ID","Zero Trust principles"],
+ facts:[["Provider","SSPU, Pune"],["Leads into","SC-300 and SC-500"]]},
+{t:"Generative AI",by:"iNeuron",st:"Completed",
+ about:"iNeuron\u2019s Generative AI community course: a hands-on, project-based walk through building applications with large language models, from the OpenAI API to vector databases.",
+ skills:["Large language models","OpenAI API","Prompt templates","LangChain chains and memory","Hugging Face Hub","Gemini and Llama models","Vector databases and Pinecone","Question-answering systems","Deploying GenAI apps"],
+ facts:[["Format","Self-paced, project based"],["Core tools","LangChain, Hugging Face, Pinecone"]],
+ mine:"This course is where my PSPM Technologies chatbot work started."},
+{t:"Google AI Essentials",by:"Coursera / Google",st:"Completed",
+ about:"A short Google course on using generative AI tools well and responsibly. It has five parts, taught by Google AI experts, and needs no technical background.",
+ skills:["Generative AI basics","Prompt engineering and few-shot prompting","Using AI to speed up everyday work","Responsible AI and bias awareness","Human oversight of AI output","Evaluating AI tools"],
+ courses:["Introduction to AI","Maximize Productivity With AI Tools","Discover the Art of Prompting","Use AI Responsibly","Stay Ahead of the AI Curve"],
+ facts:[["Format","5 short courses"],["Time","Under 10 hours"]]},
+{t:"Data Analytics",by:"Trainity",st:"Completed",
+ about:"Data analytics training covering the working toolkit of a data analyst, from cleaning and querying data to presenting it in dashboards.",
+ skills:["Excel for analysis","SQL queries","Power BI","Tableau","Data cleaning","Dashboards and visualization"],
+ facts:[["Focus","Analysis and visualization"],["Tools","Excel, Power BI, Tableau"]],
+ mine:"I use the same thinking to read logs and spot patterns in security data."},
+{t:"Python",by:"openSAP / Cisco Networking Academy",st:"Completed",
+ about:"A beginner-friendly Python programming course from Cisco Networking Academy with the OpenEDG Python Institute, ending with a complete Python project.",
+ skills:["Python syntax and data types","Variables and operators","Conditions and loops","Functions","Lists and strings","Error handling","Reading and writing files","Building a complete application"],
+ facts:[["Level","Beginner"],["Time","About 30 hours, self-paced"],["Award","Cisco digital badge"]],
+ mine:"The foundation for my ShadowFox tasks and for security scripting."},
+{t:"Advent of Cyber",by:"TryHackMe",st:"Completed",
+ about:"TryHackMe\u2019s free December event: one beginner-friendly, story-led security challenge a day, each with written steps and a walkthrough video.",
+ skills:["Linux command line","Phishing awareness and analysis","Web vulnerabilities such as IDOR and XSS","Log analysis","Digital forensics","Basic incident investigation","Red and blue team thinking"],
+ facts:[["Format","Daily hands-on rooms"],["Level","Beginner"]]},
+{t:"SC-300: Identity and Access Administrator",by:"Microsoft Learn",st:"In progress",
+ about:"Microsoft\u2019s associate certification for designing, implementing and running identity and access management with Microsoft Entra ID.",
+ skills:["User and group identities","Hybrid identity","MFA and Conditional Access","App registrations and enterprise apps","Workload identities","Identity governance and PIM","Access reviews"],
+ facts:[["Level","Associate"],["Platform","Microsoft Entra ID"]],
+ mine:"I am studying this to deepen my Entra ID and Zero Trust skills."},
+{t:"SC-500: Cloud & AI Security Engineer",by:"Microsoft Learn",st:"In progress",
+ about:"Microsoft\u2019s associate certification for implementing end-to-end security controls across cloud and AI workloads. It replaces the retiring AZ-500.",
+ skills:["Identity, access and governance","Securing storage, databases and networking","Securing compute","Security posture management","Microsoft Defender for Cloud","Microsoft Sentinel","Securing AI workloads"],
+ facts:[["Level","Associate"],["Exam","SC-500, 120 minutes"],["Pass mark","700 / 1000"]]},
+{t:"SOC Level 1 Learning Path",by:"TryHackMe",st:"In progress",
+ about:"TryHackMe\u2019s structured path for becoming an entry-level SOC analyst, with hands-on labs in simulated SOC environments.",
+ skills:["Cyber defence frameworks","Alert triage and SOC workflows","SIEM with Splunk and Elastic","Threat intelligence","Network traffic analysis (Wireshark, Zeek, Snort)","Endpoint monitoring (Sysmon, Wazuh)","Phishing analysis","Incident response"],
+ facts:[["Time","About 40\u201360 hours"],["Level","Entry-level SOC"]],
+ mine:"It matches what I practise in my home SOC lab with Wazuh and ELK."},
+{t:"SC-100: Cybersecurity Architect",by:"Microsoft Learn",st:"Planned",
+ about:"Microsoft\u2019s expert-level certification for designing a Zero Trust security strategy across identity, devices, data, applications and infrastructure. It expects an associate security certification first, which is why SC-300 and SC-500 come before it.",
+ skills:["Zero Trust strategy and architecture","Governance, risk and compliance strategy","Security operations strategy","Infrastructure security design","Data and application security strategy"],
+ facts:[["Level","Expert"],["Pass mark","700 / 1000"]]},
+{t:"CEH",by:"EC-Council",st:"Planned",
+ about:"Certified Ethical Hacker: EC-Council\u2019s credential for thinking like an attacker so that defences can be tested properly. It covers 20 modules across the phases of an attack.",
+ skills:["Footprinting and scanning","Enumeration","Vulnerability analysis","System hacking and malware","Sniffing and social engineering","Session hijacking and DoS","Web application hacking and SQL injection","Wireless, mobile and IoT hacking","Cloud security and cryptography"],
+ facts:[["Exam","125 multiple-choice questions"],["Time","4 hours"],["Optional","Practical exam in a cyber range"]]},
+{t:"OSCP",by:"OffSec",st:"Planned",
+ about:"OffSec\u2019s hands-on penetration testing certification, taken after the PEN-200 course. It tests whether you can actually break into systems in a live lab, then report it professionally.",
+ skills:["Enumeration and scanning","Web application attacks","Linux and Windows privilege escalation","Active Directory attacks","Lateral movement and pivoting","Professional reporting"],
+ facts:[["Exam","About 24 hours, practical"],["Report","24 more hours"],["Pass mark","70 / 100"]]},
+{t:"CISSP",by:"ISC2",st:"Planned",
+ about:"ISC2\u2019s senior-level information security certification covering eight domains of security management and engineering. It needs five years of paid experience in at least two domains, or you pass first and become an Associate of ISC2.",
+ skills:["Security and risk management","Asset security","Security architecture and engineering","Communication and network security","Identity and access management","Security assessment and testing","Security operations","Software development security"],
+ facts:[["Exam","100\u2013150 adaptive questions"],["Time","3 hours"],["Pass mark","700 / 1000"]]}
+];
+(function(){
+  var g=document.getElementById('cg'),d=document.getElementById('cd'),cur=0,cls={"Completed":"","In progress":"ip","Planned":"pl"};
+  var LANES=[["Security operations","From foundations to hands-on defence",[0,1,7,10,12,13]],["Cloud and identity","The Microsoft security path",[2,8,9,11]],["AI and data","Building with data and language models",[6,5,3,4]],["Long-term goal","Where the path leads",[14]]];
+  var ORDER=[].concat.apply([],LANES.map(function(l){return l[2]}));
+  var L={0:['google','G','#4285f4'],1:[null,'F','#c6ff3d'],2:[null,'S','#ff5a4f'],3:[null,'iN','#ffb020'],4:['google','G','#34a853'],5:[null,'T','#38d5ff'],6:['cisco','C','#049fd9'],7:['tryhackme','T','#ff5a4f'],8:['microsoft','MS','#00a4ef'],9:['microsoft','MS','#00a4ef'],10:['tryhackme','T','#ff5a4f'],11:['microsoft','MS','#00a4ef'],12:[null,'CEH','#ff3131'],13:['offsec','O','#ff7a00'],14:[null,'IS','#b48cff']};
+  var SC={"Completed":"st-c","In progress":"st-i","Planned":"st-p"};
+  function logo(i){var l=L[i];return '<span class="lg" style="color:'+l[2]+'">'+l[1]+(l[0]?'<img src="https://cdn.simpleicons.org/'+l[0]+'/f1efe9" alt="" loading="lazy" onload="this.parentNode.firstChild.nodeValue=\'\'" onerror="this.remove()">':'')+'</span>'}
+  var n={"Completed":0,"In progress":0,"Planned":0};C.forEach(function(c){n[c.st]++});
+  document.getElementById('cs').innerHTML='<div class="e"><b>'+n["Completed"]+'</b><span>earned</span></div><div class="p"><b>'+n["In progress"]+'</b><span>in progress</span></div><div><b>'+n["Planned"]+'</b><span>planned</span></div>';
+  document.getElementById('pb').innerHTML='<i style="flex:'+n["Completed"]+';background:#c6ff3d"></i><i style="flex:'+n["In progress"]+';background:#ffb020"></i><i style="flex:'+n["Planned"]+';background:#3a3a36"></i>';
+  g.innerHTML=LANES.map(function(ln){
+    var done=ln[2].filter(function(i){return C[i].st==='Completed'}).length;
+    var row=ln[2].map(function(i,k){
+      var c=C[i];
+      return (k?'<span class="cn2 '+SC[c.st]+'" aria-hidden="true"></span>':'')+'<button class="nd2 '+SC[c.st]+'" type="button" data-i="'+i+'" aria-label="'+c.t+', '+c.st+'">'+logo(i)+'<b>'+c.t.replace(/^SC-(\d+): /,'SC-$1 ')+'</b><small>'+c.by+'</small><em class="stt">'+c.st+'</em></button>';
+    }).join('');
+    return '<div class="lane"><div class="lh"><h3>'+ln[0]+'</h3><span>'+ln[1]+' &middot; '+done+' of '+ln[2].length+' earned</span></div><div class="lt">'+row+'</div></div>';
+  }).join('');
+  function li(a){return a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+  function show(i){
+    cur=(i+ORDER.length)%ORDER.length;var c=C[ORDER[cur]],done=c.st==='Completed';
+    var h='<span class="badge2 '+cls[c.st]+'">'+(done?'Completed':c.st==='In progress'?'In progress':'Planned, not yet earned')+'</span><h3 id="cn">'+c.t+'</h3><p class="by">'+c.by+'</p><p>'+c.about+'</p>';
+    h+='<h4>'+(done?'Skills I gained':'Skills it covers')+'</h4><ul class="sk">'+li(c.skills)+'</ul>';
+    if(c.courses)h+='<h4>Courses inside it</h4><ul class="sk">'+li(c.courses)+'</ul>';
+    if(c.facts)h+='<h4>Key facts</h4><div class="kf">'+c.facts.map(function(f){return '<div><small>'+f[0]+'</small><span>'+f[1]+'</span></div>'}).join('')+'</div>';
+    if(c.mine)h+='<div class="mine"><b>'+(done?'How I use it':'Why it matters to me')+'</b>'+c.mine+'</div>';
+    document.getElementById('cbody').innerHTML=h;d.scrollTop=0;
+  }
+  g.addEventListener('click',function(e){var b=e.target.closest('.nd2');if(!b)return;show(ORDER.indexOf(+b.dataset.i));d.showModal()});
+  document.getElementById('cc').onclick=function(){d.close()};
+  document.getElementById('cp').onclick=function(){show(cur-1)};
+  document.getElementById('cx').onclick=function(){show(cur+1)};
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});
+  var m=document.getElementById('md');
+  document.getElementById('msg').onclick=function(){m.showModal()};
+  document.getElementById('mcl').onclick=function(){m.close()};
+  m.addEventListener('click',function(e){if(e.target===m)m.close()});
+})();
+</script>
+
 </body>
 </html>
