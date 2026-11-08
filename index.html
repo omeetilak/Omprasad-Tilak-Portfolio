@@ -89,6 +89,99 @@
 @media(max-width:600px){.t3,.t3.w{grid-column:span 6}.cg{flex-direction:row}.tb{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.fb,.cur,.dots i.ip{animation:none}.rv{opacity:1;transform:none;transition:none}.pk path{transition:none;stroke-dashoffset:0}.gf{transition:none}}
 </style>
+<style>
+.asum{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-bottom:20px}
+.asum div{padding:16px 16px 14px 0}
+.asum b{display:block;font:800 clamp(40px,5.4vw,72px)/.9 var(--sans);letter-spacing:-.05em}
+.asum div:nth-child(2) b{color:var(--acc)}.asum div:nth-child(3) b{color:#ff5a4f}
+.asum span{color:var(--mute);font-size:15px}
+.af{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.af button{all:unset;cursor:pointer;font:500 15px var(--sans);padding:7px 16px;border:1px solid var(--line);border-radius:99px;color:var(--mute);transition:.2s}
+.af button:hover{color:var(--fg);border-color:#4a4a45}
+.af button.on{background:var(--acc);color:#0a0a0a;border-color:var(--acc)}
+.af button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.ahint{display:flex;align-items:center;gap:12px;margin:0 0 26px;font:500 17px var(--sans);color:var(--acc)}
+.ahint .dot{flex:none;animation-iteration-count:infinite}
+.evg{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.ev{all:unset;box-sizing:border-box;position:relative;cursor:pointer;grid-column:span 2;min-height:250px;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:18px 20px 18px;background:repeating-linear-gradient(135deg,#131311 0 14px,#0f0f0e 14px 28px);transition:transform .25s,border-color .25s;--rc:var(--acc)}
+.ev.big{grid-column:span 4;min-height:300px}.ev.wide{grid-column:span 6;min-height:210px}
+.ev:hover,.ev:focus-visible{transform:translateY(-5px);border-color:var(--rc)}
+.ev:focus-visible{outline:2px solid var(--rc);outline-offset:3px}
+.ev .cv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .4s;filter:saturate(.8)}
+.ev:hover .cv{transform:scale(1.06);opacity:.62}
+.ev:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.15),rgba(10,10,10,.88));z-index:1}
+.ev:after{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--rc);z-index:2}
+.ev>*:not(.cv){position:relative;z-index:2}
+.evt{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.evn{font:800 15px var(--sans);color:var(--mute)}
+.evb{font:700 12.5px var(--sans);padding:4px 11px;border-radius:99px;border:1px solid var(--rc);color:var(--rc);background:rgba(10,10,10,.6)}
+.ev h3{font:800 clamp(24px,2.8vw,38px)/1 var(--sans);letter-spacing:-.035em}
+.ev.big h3{font-size:clamp(30px,4vw,54px)}
+.ev .tg{display:block;font:italic 400 19px var(--serif);color:#d8d6cf;margin-top:6px}
+.ev .op{font:700 14px var(--sans);color:var(--rc);margin-top:10px;display:block}
+dialog.ad{border:1px solid var(--line);background:#0e0e0d;color:var(--fg);width:min(900px,94vw);max-height:92vh;max-height:92dvh;padding:0;border-radius:10px;overflow:auto;margin:auto}
+dialog.ad::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+html:has(dialog.ad[open]){overflow:hidden}
+dialog.ad[open]{animation:dpop2 .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes dpop2{from{opacity:0;transform:translateY(18px) scale(.98)}}
+.ad .dh{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#0e0e0d;border-bottom:1px solid var(--line);font:500 15px var(--sans)}
+.ad .dh button{all:unset;cursor:pointer;color:var(--fg);padding:4px 2px}
+.ad .dh button:hover{color:var(--acc)}
+.ad .dh button:focus-visible{outline:2px solid var(--acc);border-radius:4px}
+.ad .dh nav{display:flex;gap:22px}
+.ad .cb{padding:26px 22px 34px}
+.ad .evb{display:inline-block;margin-bottom:14px;background:none}
+.ad h3{font:800 clamp(32px,5vw,60px)/1 var(--sans);letter-spacing:-.04em}
+.ad .by{font:italic 400 22px var(--serif);color:var(--mute);margin:8px 0 20px}
+.ad p.d{color:#cfcdc6;font-size:19px;max-width:38em}
+.ad .gal2{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;padding:26px 12px 8px}
+@media(max-width:760px){.ad .gal2{grid-template-columns:1fr}}
+@media(max-width:900px){.evg{grid-template-columns:repeat(2,1fr)}.ev,.ev.big,.ev.wide{grid-column:span 1}.ev.big,.ev.wide{grid-column:span 2}}
+@media(max-width:560px){.evg{grid-template-columns:1fr}.ev,.ev.big,.ev.wide{grid-column:span 1;min-height:220px}.asum span{font-size:13px}}
+@media(prefers-reduced-motion:reduce){dialog.ad[open]{animation:none}.ev .cv{transition:none}}
+.ad h4.sb{font:700 clamp(22px,2.6vw,30px)/1.1 var(--sans);letter-spacing:-.03em;margin:34px 0 8px;padding-top:22px;border-top:1px solid var(--line)}
+.ad h4.sb span{display:block;font:italic 400 19px var(--serif);color:var(--rc);letter-spacing:0;margin-top:5px}
+.ad .kf2{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));border-top:1px solid var(--line);margin:18px 0 6px}
+.ad .kf2 div{padding:11px 14px 13px 0;border-bottom:1px solid var(--line)}
+.ad .kf2 small{display:block;color:var(--mute);font-size:13px}
+.ad .kf2 span{font-size:16px;line-height:1.35}
+.ad .sk2h{font:700 14px var(--sans);color:var(--rc);margin:20px 0 10px}
+.ad .sk2{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+.ad .sk2 li{font:500 14px var(--sans);padding:4px 11px;border:1px solid var(--line);border-radius:4px}
+.ad .sv{border-left:3px solid var(--rc);padding:2px 0 2px 16px;margin-top:20px;color:#cfcdc6;font-size:17px}
+.ad .sv b{display:block;color:var(--rc);font:700 14px var(--sans);margin-bottom:3px}
+.ad .gal2 .slot:not(:has(img)){min-height:150px}
+.cw{margin-top:22px;padding-top:6px;border-top:1px solid var(--line);font-family:var(--sans)}
+.cw h5{font:700 14px var(--sans);color:var(--acc);margin:14px 0 8px}
+.cw>div{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.5;color:#cfcdc6}
+.cw b{color:var(--acc);font-weight:700}
+.cwn{font:italic 400 15px var(--serif);color:var(--mute);margin-top:12px}
+.sp{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:#0b0b0a;padding:22px 24px;animation:fi .5s both}
+.sp .lead2{font:400 clamp(20px,2.4vw,28px)/1.25 var(--serif);margin-bottom:18px;max-width:34em}
+.sub{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.sub button{all:unset;cursor:pointer;font:700 14px var(--sans);padding:9px 16px;border:1px solid var(--line);border-radius:99px;color:var(--mute);transition:.2s;--sc:var(--acc)}
+.sub button[data-c=red]{--sc:#ff5a4f}.sub button[data-c=amber]{--sc:#ffb020}
+.sub button:hover{color:var(--fg);border-color:var(--sc)}
+.sub button[aria-pressed=true]{background:var(--sc);color:#0a0a0a;border-color:var(--sc)}
+.sub button:focus-visible{outline:2px solid var(--sc);outline-offset:3px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px 36px}
+.sg h4{font:700 15px var(--sans);color:var(--fg);margin:0 0 3px}
+.sg p{color:var(--mute);font-size:15px;line-height:1.4;margin-bottom:11px}
+.sc{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+.sc li{display:inline-flex;align-items:center;gap:7px;font:500 13.5px var(--sans);padding:4px 10px;border:1px solid var(--line);border-radius:4px;color:#d8d6cf}
+.sc li img{flex:none;opacity:.9}
+.sc li.pl{border-style:dashed;color:var(--mute)}
+.sg.off h4{color:#ff5a4f}.sg.def h4{color:var(--acc)}
+@media(max-width:600px){html .sp{padding:16px}html .cw>div{grid-template-columns:1fr;gap:2px}.sub button{min-height:42px}}
+.ph2{position:relative;margin:0}
+.ph2 img{display:block;width:100%;height:auto;border-radius:6px;background:#0f0f0e}
+.ph2:before{content:"";position:absolute;inset:-9px;border-radius:12px;padding:2px;pointer-events:none;background:conic-gradient(from var(--a),transparent 0 62%,var(--lc,#38d5ff) 88%,#fff 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;animation:orbit 3.2s linear infinite}
+.nf{padding:34px 18px;border:1px dashed #4a4a45;border-radius:6px;color:var(--mute);font:500 13.5px/1.5 ui-monospace,Menlo,monospace;text-align:center;background:repeating-linear-gradient(135deg,#141412 0 14px,#101010 14px 28px);overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){.ph2:before{animation:none}}
+.ev .cv{object-position:var(--op,center 22%)}
+.ev.wide{min-height:300px}
+@media(max-width:560px){html .ev.wide{min-height:230px}}
+</style>
 </head>
 <body>
 <div id="intro" aria-hidden="true"><span>About</span></div>
@@ -172,74 +265,27 @@
     <div class="fp" id="fp" role="tabpanel" aria-live="polite"></div>
   </section>
 
+  <section id="skills" style="padding-top:0">
+    <div class="sh"><h2>What I <i>work with</i></h2></div>
+    <div class="files" role="tablist" aria-label="Skill areas">
+      <button role="tab" id="k0" aria-selected="true" aria-controls="sp">cybersecurity.md</button>
+      <button role="tab" id="k1" aria-selected="false" aria-controls="sp">software-devops.md</button>
+      <button role="tab" id="k2" aria-selected="false" aria-controls="sp">data-science-ai.md</button>
+    </div>
+    <div class="sp" id="sp" role="tabpanel" aria-live="polite"></div>
+  </section>
+
   <section id="arena" style="padding-top:0">
     <div class="sh"><h2>In the <i>arena</i></h2></div>
-    <div class="arena">
-      <details open>
-        <summary><span class="n">01</span><span class="t">Codemahotsav</span><span class="r">Organiser · Tech Lead</span><span class="pm"></span></summary>
-        <div class="body"><div class="when">A hackathon I helped host · Organiser · Tech Lead</div><p>Appointed tech lead for the event. I developed its website, where participants signed up, registered their teams, tracked their points and viewed the challenges for each sub-event.</p>
-          <!-- Add your photos as images/codemahotsav-1.jpg and images/codemahotsav-2.jpg. Delete a slot you don't need. -->
-          <div class="gal">
-            <div class="slot" data-hint="Add images/codemahotsav-1.jpg"><img src="images/codemahotsav-1.jpeg" alt="Codemahotsav photo 1" onerror="this.remove()"></div>
-            <div class="slot" data-hint="Add images/codemahotsav-2.jpg"><img src="images/codemahotsav-2.jpeg" alt="Codemahotsav photo 2" onerror="this.remove()"></div>
-          </div>
-        </div>
-      </details>
-      <details>
-        <summary><span class="n">02</span><span class="t">Cyber Awareness Event</span><span class="r">With a team · Outreach</span><span class="pm"></span></summary>
-        <div class="body"><div class="when">SNBP High School, PCMC · With a team · Outreach</div><p>Together with a team, I ran a cyber awareness event for students at SNBP High School in Pimpri-Chinchwad, taking cybersecurity awareness to a school audience.</p>
-          <!-- Add your photos as images/cyber-awareness-1.jpg and images/cyber-awareness-2.jpg. Delete a slot you don't need. -->
-          <div class="gal">
-            <div class="slot" data-hint="Add images/cyber-awareness-1.jpg"><img src="images/cyber-awareness1.jpeg" alt="Cyber Awareness Event photo 1" onerror="this.remove()"></div>
-            <div class="slot" data-hint="Add images/cyber-awareness-2.jpg"><img src="images/cyber-awareness2.jpeg" alt="Cyber Awareness Event photo 2" onerror="this.remove()"></div>
-          </div>
-        </div>
-      </details>
-      <details>
-        <summary><span class="n">03</span><span class="t">Identity Shield</span><span class="r">Participant · 2025</span><span class="pm"></span></summary>
-        <div class="body"><div class="when">Hackathon by miniOrange · Participant · 2025</div><p>Took part with my CI/CD Pipeline Security Tool, which was selected for the event.</p>
-          <!-- Add your photos as images/identity-shield-1.jpg and images/identity-shield-2.jpg. Delete a slot you don't need. -->
-          <div class="gal">
-            <div class="slot" data-hint="Add images/identity-shield-1.jpg"><img src="images/identity-shield-1.jpeg" alt="Identity Shield photo 1" onerror="this.remove()"></div>
-            <div class="slot" data-hint="Add images/identity-shield-2.jpg"><img src="images/identity-shield-2.jpeg" alt="Identity Shield photo 2" onerror="this.remove()"></div>
-          </div>
-        </div>
-      </details>
-      <details>
-        <summary><span class="n">04</span><span class="t">JSPM Hackathon</span><span class="r">Participant</span><span class="pm"></span></summary>
-        <div class="body"><div class="when">Team build · Participant</div><p>Built and pitched a working solution under time pressure alongside other teams.</p>
-          <!-- Add your photos as images/jspm-1.jpg and images/jspm-2.jpg. Delete a slot you don't need. -->
-          <div class="gal">
-            <div class="slot" data-hint="Add images/jspm-1.jpg"><img src="images/jspm-1.jpeg" alt="JSPM Hackathon photo 1" onerror="this.remove()"></div>
-            <div class="slot" data-hint="Add images/jspm-2.jpg"><img src="images/jspm-2.jpeg" alt="JSPM Hackathon photo 2" onerror="this.remove()"></div>
-          </div>
-        </div>
-      </details>
-      <details>
-        <summary><span class="n">05</span><span class="t">Dark CTF</span><span class="r">Competitor · Online</span><span class="pm"></span></summary>
-        <div class="body"><div class="when">And other online CTFs · Competitor · Online</div><p>Capture-the-flag practice that sharpens the same instincts I use in the SOC: reading evidence, forming a hypothesis, proving it.</p>
-          <!-- Add your photos as images/dark-ctf-1.jpg and images/dark-ctf-2.jpg. Delete a slot you don't need. -->
-          <div class="gal">
-            <div class="slot" data-hint="Add images/dark-ctf-1.jpg"><img src="images/dark-ctf-1.jfif" alt="Dark CTF photo 1" onerror="this.remove()"></div>
-            <div class="slot" data-hint="Add images/dark-ctf-2.jpg"><img src="images/dark-ctf-2.png" alt="Dark CTF photo 2" onerror="this.remove()"></div>
-          </div>
-        </div>
-      </details>
-      <details>
-        <summary><span class="n">06</span><span class="t">Blockchain vs fiat debate</span><span class="r">Debater</span><span class="pm"></span></summary>
-        <div class="body"><div class="when">Debate competition · Debater</div><p>Argued the case on blockchain-based currency against fiat, which meant digging into how trust, control and security work in both systems.</p>
-          <!-- Add your photos as images/debate-1.jpg and images/debate-2.jpg. Delete a slot you don't need. -->
-          <div class="gal">
-            <div class="slot" data-hint="Add images/debate-1.jpg"><img src="images/debate-1.jpeg" alt="Blockchain vs fiat debate photo 1" onerror="this.remove()"></div>
-            <div class="slot" data-hint="Add images/debate-2.jpg"><img src="images/debate-2.jpeg" alt="Blockchain vs fiat debate photo 2" onerror="this.remove()"></div>
-          </div>
-        </div>
-      </details>
-    </div>
+    <div class="asum"><div><b data-n="7">0</b><span>events and competitions</span></div><div><b data-n="2">0</b><span>I helped organise</span></div><div><b data-n="5">0</b><span>I competed in</span></div></div>
+    <div class="af" role="group" aria-label="Filter events"><button type="button" class="on" data-f="all">All</button><button type="button" data-f="org">Organised</button><button type="button" data-f="comp">Competed</button></div>
+    <p class="ahint"><span class="dot" aria-hidden="true"></span>Click any card to see the story and the photos.</p>
+    <div class="evg" id="evg"></div>
   </section>
   <a class="next" href="work.html"><small>Next page</small><b>Selected work &rarr;</b></a>
 </main>
 
+<dialog class="ad" id="ad" aria-labelledby="an"><div class="dh"><nav><button id="ap" type="button">&larr; Prev</button><button id="ax" type="button">Next &rarr;</button></nav><button id="ac" type="button">Close</button></div><div class="cb" id="ab"></div></dialog>
 <footer>
   <div><b>Code</b><a href="https://github.com/omeetilak" target="_blank" rel="noopener">GitHub</a></div>
   <div><b>Social</b><a href="https://in.linkedin.com/in/omprasad-tilak-69430b297" target="_blank" rel="noopener">LinkedIn</a></div>
@@ -279,18 +325,103 @@
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on','in');io.unobserve(e.target)}})},{threshold:.12});
     tiles.forEach(function(t){io.observe(t)});
-    document.querySelectorAll('.bento,.tools,.tools2,#about,#arena').forEach(function(s){s.classList.add('rv');io.observe(s)});
+    document.querySelectorAll('.bento,.tools,.tools2,#about,#skills,#arena').forEach(function(s){s.classList.add('rv');io.observe(s)});
   }else{tiles.forEach(function(t){t.classList.add('on')})}
   /* second marquee */
   var t2=document.getElementById('track2');if(t2)t2.innerHTML+=t2.innerHTML;
   /* profile tabs */
-  var P=[['studying.md','B.Tech in Computer Science and Engineering at Symbiosis Skills and Professional University. 2023 \u2013 2027, CGPA 8.5.'],['into.md','Detection engineering, threat hunting, cloud identity security, DevSecOps and applied GenAI.'],['now.md','Running a home SOC lab, preparing for Microsoft SC-300 and SC-500, and working through TryHackMe\u2019s SOC Level 1 path.'],['beyond.md','Fort treks, the gym, hackathons, CTFs and debate. Events are below, and the treks have their own <a href="trail.html" style="color:var(--acc)">Trail page</a>.']];
-  var fp=document.getElementById('fp'),tabs=document.querySelectorAll('.files button');
+  var CW="<div class=\"cw\"><h5>Coursework, semester by semester</h5><div><b>Sem I</b><span>Applied Mathematics I \u00b7 Sustainability and Environmental Studies \u00b7 Digital Electronics Fundamentals \u00b7 Computer Programming and Algorithms \u00b7 Introduction to IT and Cybersecurity \u00b7 Computer Organization and Architecture \u00b7 Business Communication Skills</span></div><div><b>Sem II</b><span>Data Structures \u00b7 Web Technology and Vulnerability \u00b7 Operating Systems, Compilers and Security Engineering \u00b7 Human Behaviour and Psychology of Criminals \u00b7 Python Programming \u00b7 Applied Mathematics II \u00b7 Life Coping Skills \u00b7 Summer Internship</span></div><div><b>Sem III</b><span>Ethical Hacking \u00b7 Computer Networks \u00b7 Physical Security Devices, Procedures and Controls \u00b7 Database Management System and Controls \u00b7 Design and Analysis of Algorithms \u00b7 Domain Foundation I (elective options: Cyber Security Risk Management, End Point Security, Cyber Crime Detection, Forensics and Laws) \u00b7 Personality Enhancement Skills</span></div><div><b>Sem IV</b><span>Advanced Cryptography \u00b7 Cloud and Infrastructure Security \u00b7 Network Security \u00b7 Digital Forensics \u00b7 Application Security \u00b7 Domain Foundation II (elective options: Secure Software Development, Security in Wireless Ad hoc Networks, Mobile Forensics) \u00b7 Internship \u00b7 Career Development Skills</span></div><div><b>Sem V</b><span>Malware Analysis \u00b7 Cyber-Physical Systems \u00b7 Communication Technology and Security \u00b7 Security Testing \u00b7 Innovative Project \u00b7 Domain Advance I (elective options: Data Security and Privacy, Advanced Network Security, Network Forensics) \u00b7 Professional Competency Skills</span></div><div><b>Sem VI</b><span>Blockchain and Cryptography \u00b7 SIEM and SOAR \u00b7 Cyber Threat Management \u00b7 Authentication and Identity Management \u00b7 Security Compliance and Audit Methodology \u00b7 Domain Advance II (elective options: Open Source Intelligence Analysis, IoT Security, Enterprise Cloud Forensics) \u00b7 Behaviour Skills \u00b7 Internship</span></div><div><b>Sem VII</b><span>Security Architecture and Engineering \u00b7 Machine Learning for Cybersecurity \u00b7 Cyber Incident Planning and Response \u00b7 Project</span></div><div><b>Sem VIII</b><span>Internship \u00b7 Seminar</span></div><p class=\"cwn\">From the SSPU programme structure for the B.Tech in Computer Science and IT (Cyber Security). Electives are the options the university offers.</p></div>";
+  var P=[['studying.md','B.Tech in Computer Science and Engineering at Symbiosis Skills and Professional University. 2023 \u2013 2027, CGPA 8.5.'+CW],['into.md','Detection engineering, threat hunting, cloud identity security, DevSecOps and applied GenAI.'],['now.md','Running a home SOC lab, preparing for Microsoft SC-300 and SC-500, and working through TryHackMe\u2019s SOC Level 1 path.'],['beyond.md','Fort treks, the gym, hackathons, CTFs and debate. Events are below, and the treks have their own <a href="trail.html" style="color:var(--acc)">Trail page</a>.']];
+  var fp=document.getElementById('fp'),tabs=document.querySelectorAll('#about .files button');
   function tab(k){tabs.forEach(function(b,j){b.setAttribute('aria-selected',j===k)});fp.style.animation='none';fp.offsetWidth;fp.style.animation='';fp.innerHTML='<span class="pth">~/'+P[k][0]+'</span>'+P[k][1];fp.setAttribute('aria-labelledby','t'+k)}
   tabs.forEach(function(b,k){b.addEventListener('click',function(){tab(k)})});
   tab(0);
 })();
 </script>
 
+<script>
+(function(){
+  var EX=['jpeg','jpg','png','webp','jfif','JPG','JPEG','PNG'];
+  window.nx=function(im){
+    var o=im.getAttribute('data-o');
+    if(!o){
+      o=im.getAttribute('src');im.setAttribute('data-o',o);
+      var m=o.match(/^(.+?)(-?)(\d)\.\w+$/),b=[o.replace(/\.\w+$/,'')];
+      if(m){b.push(m[1]+m[3]);b.push(m[1]+'-'+m[3])}
+      var l=[];b.forEach(function(x){EX.forEach(function(e){var c=x+'.'+e;if(c!==o&&l.indexOf(c)<0)l.push(c)})});
+      im.setAttribute('data-l',JSON.stringify(l));im.setAttribute('data-k','0');
+    }
+    var l=JSON.parse(im.getAttribute('data-l')),k=+im.getAttribute('data-k');
+    if(k<l.length){im.setAttribute('data-k',k+1);im.src=l[k]}else{im.onerror=null;if(im.classList.contains('cv')){im.remove()}else{var n=document.createElement('div');n.className='nf';n.textContent='Photo not found: '+o+'. Save the file in the images folder with exactly this name.';im.parentNode.replaceChild(n,im)}}
+  };
+  var E=[
+   {t:"Codemahotsav",role:"Organiser \u00b7 Tech Lead",g:"org",c:"#c6ff3d",tag:"A hackathon I helped host",big:1,d:"Appointed tech lead for the event. I developed its website, where participants signed up, registered their teams, tracked their points and viewed the challenges for each sub-event.",img:["images/codemahotsav-1.jpeg","images/codemahotsav-2.jpeg"]},
+   {t:"Cyber Awareness Event",role:"With a team \u00b7 Outreach",g:"org",c:"#38d5ff",tag:"SNBP High School, PCMC",d:"Together with a team, I ran a cyber awareness event for students at SNBP High School in Pimpri-Chinchwad, taking cybersecurity awareness to a school audience.",img:["images/cyber-awareness1.jpeg","images/cyber-awareness2.jpeg"]},
+   {t:"Identity Shield",role:"Participant \u00b7 2025",g:"comp",c:"#ffb020",tag:"Hackathon by miniOrange",d:"Took part with my CI/CD Pipeline Security Tool, which was selected for the event.",img:["images/identity-shield-1.jpeg","images/identity-shield-2.jpeg"]},
+   {t:"JSPM Hackathon",role:"Participant",g:"comp",c:"#ffb020",tag:"Email spoofing detection",d:"At the hackathon I built an email spoofing detection product. It checks the email authentication protocols SPF, DKIM and DMARC and uses a machine learning model to predict whether a message is spoofed. SPF lists which servers may send mail for a domain, DKIM adds a cryptographic signature to prove the message was not altered, and DMARC tells receivers what to do when those checks fail. Spoofed emails like this are how many phishing attacks begin.",
+     facts:[["Built","Email spoofing detection product"],["Checks","SPF, DKIM and DMARC"],["Prediction","Machine learning model"],["Format","Team build under time pressure"]],
+     cats:["SPF","DKIM","DMARC","Machine learning","Email security","Phishing defence"],ch:"What it uses",solved:"",
+     img:["images/jspm-1.jpeg","images/jspm-2.jpeg"]},
+   {t:"CTFs",role:"Competitor \u00b7 Online and Pune",g:"comp",c:"#ff5a4f",tag:"Dark CTF and OWASP ByteMe CTF",d:"Capture-the-flag competitions sharpen the same instincts I use in the SOC: reading evidence, forming a hypothesis, proving it. Both of these were Jeopardy-style, where each solved challenge hides a flag worth points on a live scoreboard.",img:["images/dark-ctf-1.jfif"],subs:[
+     {n:"DARK CTF 2026",m:"Online \u00b7 14\u201315 March 2026",d:"A national-level capture-the-flag run by HackCulture under the CrackOn Community. Its theme was inspired by the intensity of dark web series, and it was built around execution under real-world cyber pressure rather than theory.",
+      facts:[["Theme","Inspired by dark web series"],["Organiser","HackCulture \u00b7 CrackOn Community"],["Format","Jeopardy, online"],["Duration","24 hours"]],solved:"",
+      img:["images/dark-ctf-1.jfif","images/dark-ctf-2.png"]},
+     {n:"OWASP ByteMe CTF 26",m:"OWASP PCCOE, Pune \u00b7 9 October 2026",d:"A Jeopardy-style capture-the-flag run by the OWASP Student Chapter and the Department of Computer Engineering at Pimpri Chinchwad College of Engineering, Pune. Challenges ranged from beginner-friendly to advanced, and flags were submitted through the CTF7 platform.",
+      facts:[["Organiser","OWASP PCCOE \u00b7 Dept. of Computer Engineering"],["Format","Jeopardy, online and onsite at PCCOE"],["Platform","CTF7"],["Time","10:00 AM \u2013 6:00 PM IST"],["Team size","1\u20132 members"],["Prize pool","\u20b91,50,000+"]],
+      cats:["OSINT","Web security","Cryptography","Digital forensics","Steganography","Reverse engineering","Binary exploitation","AI security","Miscellaneous"],solved:"",
+      img:["images/byteme-ctf-1.jpeg","images/byteme-ctf-2.jpeg"]}]},
+   {t:"Blockchain vs fiat debate",role:"Debater",g:"comp",c:"#b48cff",tag:"Debate competition",wide:1,pos:"center 40%",d:"Argued the case on blockchain-based currency against fiat, which meant digging into how trust, control and security work in both systems.",img:["images/debate-1.jpeg","images/debate-2.jpeg"]}
+  ];
+  var g=document.getElementById('evg'),d=document.getElementById('ad'),cur=0;
+  if(!g)return;
+  g.innerHTML=E.map(function(x,i){
+    return '<button class="ev'+(x.big?' big':'')+(x.wide?' wide':'')+'" type="button" data-i="'+i+'" data-g="'+x.g+'" style="--rc:'+x.c+';--op:'+(x.pos||'center 22%')+'" aria-label="'+x.t+': open the story and photos"><img class="cv" src="'+x.img[0]+'" alt="" loading="lazy" onerror="nx(this)"><div class="evt"><span class="evn">0'+(i+1)+'</span><span class="evb">'+x.role+'</span></div><div><h3>'+x.t+'</h3><span class="tg">'+x.tag+'</span><span class="op">Open the story &rarr;</span></div></button>';
+  }).join('');
+  function extra(u){
+    var o='';
+    if(u.facts)o+='<div class="kf2">'+u.facts.map(function(f){return '<div><small>'+f[0]+'</small><span>'+f[1]+'</span></div>'}).join('')+'</div>';
+    if(u.cats)o+='<h5 class="sk2h">'+(u.ch||'Challenge types in this event')+'</h5><ul class="sk2">'+u.cats.map(function(c){return '<li>'+c+'</li>'}).join('')+'</ul>';
+    if(u.solved)o+='<div class="sv"><b>What I solved</b>'+u.solved+'</div>';
+    return o;
+  }
+  function gal(im,t,c){return '<div class=\"gal2\">'+im.map(function(s,k){return '<figure class=\"ph2\" style=\"--lc:'+c+'\"><img src=\"'+s+'\" alt=\"'+t+' photo '+(k+1)+'\" decoding=\"async\" onerror=\"nx(this)\"></figure>'}).join('')+'</div>'}
+  function show(i){
+    cur=(i+E.length)%E.length;var x=E[cur];
+    document.getElementById('ab').innerHTML='<span class="evb" style="--rc:'+x.c+';border-color:'+x.c+';color:'+x.c+'">'+x.role+'</span><h3 id="an">'+x.t+'</h3><p class="by">'+x.tag+'</p><p class="d">'+x.d+'</p>'+(x.subs?x.subs.map(function(u){return '<h4 class="sb" style="--rc:'+x.c+'">'+u.n+'<span>'+u.m+'</span></h4><p class="d">'+u.d+'</p>'+extra(u)+gal(u.img,u.n,x.c)}).join(''):extra(x)+gal(x.img,x.t,x.c));
+    d.scrollTop=0;
+  }
+  g.addEventListener('click',function(e){var b=e.target.closest('.ev');if(!b)return;show(+b.dataset.i);d.showModal()});
+  document.getElementById('ac').onclick=function(){d.close()};
+  document.getElementById('ap').onclick=function(){show(cur-1)};
+  document.getElementById('ax').onclick=function(){show(cur+1)};
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});
+  document.querySelectorAll('.af button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.af button').forEach(function(o){o.classList.toggle('on',o===b)});
+    var f=b.dataset.f;g.querySelectorAll('.ev').forEach(function(c){c.style.display=(f==='all'||c.dataset.g===f)?'':'none'});
+  })});
+})();
+</script>
+<script>
+(function(){
+  var LG={"Splunk": "splunk", "IBM QRadar": "ibm", "Elastic Stack": "elastic", "Wireshark": "wireshark", "Burp Suite": "burpsuite", "OWASP ZAP": "owasp", "OWASP Top 10": "owasp", "Docker": "docker", "GitHub Actions": "githubactions", "Python": "python", "JavaScript": "javascript", "TypeScript": "typescript", "React": "react", "Node.js": "nodedotjs", "Spring Boot": "springboot", "Flask": "flask", "FastAPI": "fastapi", "MySQL": "mysql", "PostgreSQL": "postgresql", "MongoDB": "mongodb", "Angular": "angular", "Ionic": "ionic", "SonarQube": "sonarqubeserver", "Snyk": "snyk", "Postman": "postman", "Git and GitHub": "github", "LangChain": "langchain", "Hugging Face": "huggingface", "Streamlit": "streamlit", "Scikit-learn": "scikitlearn", "Pandas": "pandas", "NumPy": "numpy", "Jupyter": "jupyter", "Power BI": "powerbi", "Tableau": "tableau", "Java": "openjdk", "Gemini API": "googlegemini", "OpenAI API": "openai", "Anthropic API": "anthropic", "Pinecone": "pinecone", "Microsoft Defender for Cloud": "microsoftazure", "VirusTotal": "virustotal", "Maven": "apachemaven", "PowerShell": "powershell", "Bash": "gnubash", "Matplotlib": "plotly", "XGBoost": "xgboost"};
+  var S={"cyber": {"lead": "I work both sides of security: the defensive tools that watch and respond, and the offensive skills that show how systems break.", "tabs": [{"k": "Defensive tools", "c": "acc", "cls": "def", "g": [["SIEM and monitoring", "Watching logs and writing detections.", ["Splunk", "IBM QRadar", "Microsoft Sentinel (KQL)", "Wazuh", "Elastic Stack", "IDS / IPS"]], ["Endpoint, email and cloud", "Investigating compromised machines, phishing and risky sign-ins.", ["Defender XDR", "Cybereason", "Proofpoint", "KnowBe4", "Microsoft Defender for Cloud", "Microsoft Entra ID", "Conditional Access", "PIM", "Intune"]], ["Threat intelligence and analysis", "Checking whether an IP, link or file is really malicious.", ["VirusTotal", "AbuseIPDB", "Cisco Talos", "Hybrid Analysis", "ANY.RUN", "Dark web monitoring", "Wireshark"]]]}, {"k": "Offensive tools", "c": "red", "cls": "off", "g": [["Web and application testing", "Finding weaknesses before attackers do.", ["Burp Suite", "OWASP ZAP", "Postman", "OWASP Top 10"]], ["Practice grounds", "Where I sharpen attacker thinking.", ["CTFs", "TryHackMe", "Advent of Cyber", "Ethical Hacking (coursework)"]], ["Next on the path", "Certifications I am aiming for.", ["CEH|pl", "OSCP|pl"]]]}, {"k": "Frameworks and compliance", "c": "amber", "cls": "def", "g": [["Threat and attack frameworks", "", ["MITRE ATT&CK (Enterprise and Cloud)", "Cyber Kill Chain", "OWASP Top 10", "PICERL", "Zero Trust"]], ["Standards and regulations", "", ["NIST CSF", "ISO 27001", "CIS Controls", "GDPR", "PCI-DSS", "DPDPA", "ISMS"]]]}]}, "dev": {"lead": "I build full-stack apps, and I build the pipelines that keep them from shipping vulnerabilities.", "tabs": [{"k": "Languages and web", "c": "acc", "cls": "def", "g": [["Languages", "", ["Python", "JavaScript", "TypeScript", "Java", "SQL", "Bash", "PowerShell", "KQL"]], ["Frontend and backend", "", ["Angular", "Ionic", "React", "Node.js", "Spring Boot", "Flask", "FastAPI", "REST APIs", "JWT", "OAuth2"]], ["Databases", "", ["MySQL", "PostgreSQL", "MongoDB"]]]}, {"k": "DevOps and DevSecOps", "c": "amber", "cls": "def", "g": [["Pipeline and delivery", "Automating builds, checks and releases.", ["Git and GitHub", "GitHub Actions", "Docker", "Docker hardening", "Maven"]], ["Security in the pipeline", "Scanning code, containers and dependencies on every commit.", ["SonarQube", "Semgrep", "Snyk", "Trivy", "OWASP ZAP", "Postman"]]]}]}, "ai": {"lead": "I build with language models and read data for a living, then point both at security problems.", "tabs": [{"k": "Generative AI", "c": "acc", "cls": "def", "g": [["Models and APIs", "", ["Gemini API", "OpenAI API", "Anthropic API", "LLMs", "Prompt engineering"]], ["Retrieval and agents", "", ["RAG", "LangChain", "FAISS", "ChromaDB", "Pinecone", "Hugging Face", "AI agents", "Streamlit"]]]}, {"k": "Data science and ML", "c": "red", "cls": "off", "g": [["Machine learning", "", ["Scikit-learn", "XGBoost", "NLP", "Pandas", "NumPy", "Jupyter"]], ["Analytics and visualization", "", ["Power BI", "Tableau", "Excel"]], ["ML in security", "Used to predict spoofed email at the JSPM hackathon.", ["Email spoofing detection", "Machine learning for security"]]]}]}};
+  var keys=['cyber','dev','ai'],names=['cybersecurity.md','software-devops.md','data-science-ai.md'];
+  var sp=document.getElementById('sp'),tabs=document.querySelectorAll('#skills .files button');
+  if(!sp)return;
+  function chip(t){var p=t.split('|'),n=p[0],s=LG[n]?'<img src="https://cdn.simpleicons.org/'+LG[n]+'/f1efe9" alt="" width="14" height="14" loading="lazy" onerror="this.remove()">':'';return '<li'+(p[1]?' class="'+p[1]+'"':'')+'>'+s+n+'</li>'}
+  function groups(t){return '<div class="sg '+t.cls+'">'+t.g.map(function(g){return '<div><h4>'+g[0]+'</h4>'+(g[1]?'<p>'+g[1]+'</p>':'<p></p>')+'<ul class="sc">'+g[2].map(chip).join('')+'</ul></div>'}).join('')+'</div>'}
+  function render(k,sub){
+    var d=S[keys[k]];sub=sub||0;
+    var h='<span class="pth" style="display:block;font:500 13px ui-monospace,Menlo,monospace;color:var(--acc);margin-bottom:10px">~/'+names[k]+'</span><p class="lead2">'+d.lead+'</p>';
+    h+='<div class="sub" role="group" aria-label="Sections">'+d.tabs.map(function(t,i){return '<button type="button" data-i="'+i+'" data-c="'+t.c+'" aria-pressed="'+(i===sub)+'">'+t.k+'</button>'}).join('')+'</div>';
+    h+=groups(d.tabs[sub]);
+    sp.innerHTML=h;sp.style.animation='none';sp.offsetWidth;sp.style.animation='';
+    sp.setAttribute('aria-labelledby','k'+k);
+    sp.querySelectorAll('.sub button').forEach(function(b){b.addEventListener('click',function(){render(k,+b.dataset.i)})});
+  }
+  tabs.forEach(function(b,k){b.addEventListener('click',function(){tabs.forEach(function(o,j){o.setAttribute('aria-selected',j===k)});render(k,0)})});
+  render(0,0);
+})();
+</script>
 </body>
 </html>

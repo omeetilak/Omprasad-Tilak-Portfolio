@@ -273,3 +273,123 @@ html.show-pt #pt{display:grid;position:fixed;inset:0;z-index:90;place-items:cent
 @media(max-width:760px){.trail figure.latest .slot,.trail figure.latest .slot:has(img){aspect-ratio:4/3}}
 .ring .portrait,.ring .portrait:has(img){aspect-ratio:4/5}
 .ring .portrait img{object-fit:cover}
+
+/* ===== RESPONSIVE LAYER (keep this block last) =====
+   "html " prefixes lift these rules above the page-level <style> blocks. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+*{-webkit-tap-highlight-color:transparent}
+img,svg,video,canvas{max-width:100%}
+body{overflow-x:hidden}
+.tb,.fp,.cb p,.body,.team{overflow-wrap:anywhere}
+
+/* tablets and small laptops */
+@media(max-width:900px){
+  :root{--pad:clamp(18px,4.5vw,40px)}
+  html .sh{flex-wrap:wrap;margin-bottom:32px}
+  html section{padding-top:clamp(56px,9vw,96px);padding-bottom:clamp(56px,9vw,96px)}
+  html .hero.hero2{min-height:auto;padding-top:112px}
+  html .hero.hero2 .scroll{display:none}
+}
+
+/* phones */
+@media(max-width:600px){
+  body{font-size:16.5px}
+  .bar a,.bar button{min-height:44px;padding:10px 6px;font-size:17px}
+  #menu{overflow-y:auto;padding-bottom:calc(var(--pad) + env(safe-area-inset-bottom,0px))}
+  #menu nav a{font-size:clamp(40px,13vw,66px);padding:2px 0}
+  #menu .cn{grid-template-columns:repeat(3,1fr)}
+  html .sh h2{font-size:clamp(34px,10.5vw,54px)}
+  html .sh a{font-size:15px}
+  html .hero{padding-top:96px;gap:26px}
+  html .hero.hero2{padding-top:96px;gap:22px}
+  html .hero.hero2 h1{font-size:clamp(27px,8vw,38px);line-height:1.1}
+  html .kick{font-size:13.5px;line-height:1.35;border-radius:14px;align-items:flex-start}
+  html .term{margin-top:20px}
+  html .tb{font-size:12.5px;min-height:176px;padding:12px}
+  html .pv{padding:4px 0 0;justify-self:center;width:100%}
+  html .pv .ring{width:min(230px,62vw)}
+  html .fb{font-size:11.5px;padding:5px 10px}
+  html .fb.a{left:2%}html .fb.b{right:2%}html .fb.c{left:2%}html .fb.d{right:2%}
+  html .bento{gap:10px;padding-top:20px}
+  html .t3{padding:18px 18px 16px;grid-column:span 6}
+  html .t3 .big{font-size:clamp(52px,18vw,78px)}
+  html .gw{width:108px;height:108px}
+  html .gn b{font-size:32px}
+  html .go2{font-size:17px}
+  html .tl div{font-size:12px}
+  html .files button{padding:11px 13px;font-size:13.5px;min-height:42px}
+  html .fp{padding:16px;font-size:19px;min-height:100px}
+  html .ab .big{font-size:clamp(24px,7vw,32px)}
+  html .asum b{font-size:clamp(36px,12vw,56px)}
+  html .af button{min-height:42px;padding:9px 16px}
+  html .ahint,html .hint{font-size:15.5px;align-items:flex-start;margin-bottom:22px}
+  html .ev{padding:16px;min-height:200px}
+  html .ev h3{font-size:24px}
+  html .ev.big h3{font-size:28px}
+  html .ev .tg{font-size:17px}
+  summary{grid-template-columns:30px 1fr 28px;padding:20px 0;gap:10px}
+  summary .t{font-size:clamp(22px,7vw,32px)}
+  html .body.rich,html .body{padding-left:0}
+  html .one{font-size:21px}
+  html .trail{grid-template-columns:repeat(2,1fr);gap:22px 14px}
+  html .trail figure.latest{grid-column:1/-1;max-width:none}
+  html .trail figcaption{font-size:16px}
+  html .trail figcaption span{font-size:12.5px}
+  html .trail-intro{font-size:22px;margin-bottom:28px}
+  html .life{grid-template-columns:1fr}
+  html .work{gap:46px 0}
+  html .meta{flex-wrap:wrap;gap:6px 16px}
+  html .meta h3{font-size:22px}
+  html .meta span{white-space:normal;text-align:left}
+  html .vl{gap:10px 18px}
+  html .nd2{flex-basis:146px}
+  html .lh span{font-size:16px}
+  html .cstats b{font-size:clamp(38px,12vw,56px)}
+  html .hw p{font-size:15px}
+  html .vh{padding:10px 14px}
+  html .flow{padding:16px 14px 18px}
+  .next{padding:44px var(--pad)}
+  .next b{font-size:clamp(34px,11vw,54px)}
+  .contact h2{font-size:clamp(46px,15vw,72px)}
+  .btns{flex-direction:column;align-items:stretch}
+  .btns .btn{text-align:center;padding:16px 20px;font-size:17px}
+  html .opt{padding:16px}
+  footer{grid-template-columns:1fr 1fr;gap:22px;font-size:14px}
+  footer div:last-child{grid-column:1/-1}
+  /* pop-ups become bottom sheets */
+  html dialog,html dialog.ad,html dialog.cdlg{width:100%;max-width:100%;max-height:94vh;max-height:94dvh;margin:auto 0 0;border-radius:16px 16px 0 0}
+  html .dh{padding:10px 16px}
+  html .dh button{min-height:44px;padding:8px 4px}
+  html .dh nav{gap:18px}
+  html .cb{padding:20px 16px 28px}
+  html .cb h3,html .ad h3{font-size:clamp(28px,9vw,40px)}
+  html .cb p,html .ad p.d{font-size:17px}
+  html .ad .gal2{gap:26px;padding:20px 10px 4px}
+  html .dg{padding:18px 16px 6px;gap:18px}
+  html .db{padding:16px 16px 24px}
+  html .kf{grid-template-columns:1fr 1fr}
+}
+
+/* very small phones */
+@media(max-width:380px){
+  html .fb.b,html .fb.c{display:none}
+  html .t3 .big{font-size:50px}
+  html .trail{gap:18px 10px}
+  summary .t{font-size:21px}
+  #menu nav a{font-size:38px}
+  footer{grid-template-columns:1fr}
+}
+
+/* short landscape phones */
+@media(max-height:480px) and (orientation:landscape){
+  html .hero,html .hero.hero2{min-height:auto;padding-top:84px}
+  #menu{overflow-y:auto}
+  #menu nav a{font-size:32px}
+  html dialog,html dialog.ad,html dialog.cdlg{max-height:100vh;max-height:100dvh}
+}
+
+/* touch screens: no hover, so keep the cues visible */
+@media(hover:none){
+  html .ev .op{opacity:1}
+  html .go2{opacity:1}
+}
